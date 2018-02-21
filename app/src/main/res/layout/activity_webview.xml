@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_color_white">
+
+
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_color_grey_light2"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/ll1"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/v1"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <FrameLayout
+            android:id="@+id/fl1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:indeterminate="true"/>
+        </FrameLayout>
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlNoInternetAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+
+
+        <ImageView
+            android:id="@+id/ivNoInternet"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="@dimen/activity_margin"
+            android:src="@drawable/ic_no_internet"/>
+
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivNoInternet"
+            android:layout_margin="@dimen/activity_margin"
+            android:gravity="center"
+            android:text="Oops! No Internet Available"
+            android:textSize="@dimen/text_size_extra_small"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
